@@ -33,7 +33,7 @@
 
 <script>
 
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZGRuLSIsImEiOiJjbG4xdWhsOWkwMjQwMnRsbDczaGdpYnJoIn0.3lZ7y0JIB1dYeTG2yFD_Ig'
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZGRuLSIsImEiOiJjbG45MTU2YXgwMnU4MmtudDllZzJrcWZsIn0.SVTsXIpZj0h--WUnUK3WwQ';
 
 const map = new mapboxgl.Map({
   container: 'map', // container id
@@ -44,19 +44,20 @@ const map = new mapboxgl.Map({
 
   map.on('load',function(){
   // Give your layer's source a nickname you'll remember easily. I've called my source `sandy_layer`.
-  map.addSource('sandy_layer',{
-    'type':'vector',
-    'url': 'mapbox://ddn-.2fop240l'
-  });
+map.addSource('sandy_layer', {
+    'type': 'vector',
+    'url': 'mapbox://ddn-.beksidax'
+});
 
-  // add a new layer with your polygons
-  map.addLayer({
-    'id':'flood_zones',
-    'type':'fill',
-    'source':'sandy_layer',
-    'paint':{
-      'fill-color':'#00158f',
-      'fill-opacity': 0.5
+// add a new layer with your polygons
+map.addLayer({
+    'id': 'flood_zones',
+    'type': 'fill',
+    'source': 'sandy_layer',
+    'source-layer': 'Sandy_Inundation_Zone-2bsrxd',  // This should be the name of the layer within the vector source
+    'paint': {
+        'fill-color': '#00158f',
+        'fill-opacity': 0.5
     }
   })
 });
