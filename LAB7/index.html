@@ -60,23 +60,23 @@ map.addLayer({
         'fill-opacity': 0.5
     }
   });
+
 map.addSource('NYCHA_layer', {
     'type': 'vector',
     'url': 'mapbox://ddn-.8w5dzluw'
 });
 
-// add a new layer with your polygons
 map.addLayer({
     'id': 'Developments',
     'type': 'fill',
     'source': 'NYCHA_layer',
-    'source-layer': 'Map_of_NYCHA_Developments-aguh5d',  // This should be the name of the layer within the vector source
+    'source-layer': 'Map_of_NYCHA_Developments-aguh5d',
     'paint': {
-        'fill-color': '#00157f',
+        'fill-color': '#00158f',
         'fill-opacity': 0.5
     }
-  })
 });
+
 </script>
 
 </body>
