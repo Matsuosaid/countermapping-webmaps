@@ -67,9 +67,21 @@ map.addSource('NYCHA_layer', {
     'type': 'vector',
     'url': 'mapbox://ddn-.8w5dzluw'
 });
-
-
-
+map.addLayer({
+      'id':'povertyLevel',
+      'type':'fill',
+      'source':'censusLayer',
+      'source-layer':'nyc_blck_grp_2020_wcensus_dro-4db43i',
+      'paint':{
+        'fill-color':['interpolate',
+    ['linear'],
+    ['get','AMR5E002'],
+    1,'white',
+    915,'#006125'
+],
+        'fill-opacity': 0.5
+      }
+ });
 // add a new layer with your polygons
 
 map.addLayer({
@@ -92,6 +104,11 @@ map.addLayer({
         'fill-opacity': 0.5
       }
     });
+    map.addSource('censusLayer',{
+      'type':'vector',
+      'url': 'mapbox://iamwfx.6nowkujs'
+    });
+
   });
   // Within a script, you comment using two backslashes.
   </script>
