@@ -10,7 +10,7 @@ body {
 .map-overlay {
   font-family: 'Montserrat', sans-serif;
   position: fixed;
-  width: 30%;
+  width: 25%;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -21,6 +21,12 @@ body {
 .map-overlay-inner {
   padding: 30px;
   margin-bottom: 10px;
+}
+
+.check-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 }
 
 .map-overlay h2 {
