@@ -56,6 +56,7 @@
 
   map.on('load',function(){
     // Give your layer's source a nickname you'll remember easily.
+
 map.addSource('sandy_layer', {
     'type': 'vector',
     'url': 'mapbox://ddn-.beksidax'
@@ -67,14 +68,10 @@ map.addSource('NYCHA_layer', {
     'url': 'mapbox://ddn-.8w5dzluw'
 });
 
-    // add a new layer with your polygons
 
-map.addSource('sandy_layer', {
-    'type': 'vector',
-    'url': 'mapbox://ddn-.beksidax'
-});
 
 // add a new layer with your polygons
+
 map.addLayer({
     'id': 'flood_zones',
     'type': 'fill',
