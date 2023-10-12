@@ -52,16 +52,6 @@ map.addSource('sandy_layer', {
 });
 
 // add a new layer with your polygons
-map.addLayer({
-    'id': 'flood_zones',
-    'type': 'fill',
-    'source': 'sandy_layer',
-    'source-layer': 'Sandy_Inundation_Zone-2bsrxd',  // This should be the name of the layer within the vector source
-    'paint': {
-        'fill-color': '#00158f',
-        'fill-opacity': 0.5
-    }
-  });
 
 map.addSource('NYCHA_layer', {
     'type': 'vector',
@@ -78,6 +68,18 @@ map.addLayer({
         'fill-opacity': 0.5
     }
 });
+
+map.addLayer({
+    'id': 'flood_zones',
+    'type': 'fill',
+    'source': 'sandy_layer',
+    'source-layer': 'Sandy_Inundation_Zone-2bsrxd',  // This should be the name of the layer within the vector source
+    'paint': {
+        'fill-color': '#00158f',
+        'fill-opacity': 0.5
+    }
+  });
+
 }); 
 
 </script>
